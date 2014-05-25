@@ -93,13 +93,13 @@
 	<HSAPowerMode>0</HSAPowerMode>
 	<BLLPEOFPowerMode>1</BLLPEOFPowerMode>
 	<BLLPPowerMode>1</BLLPPowerMode>
-	<TrafficMode>"non_burst_sync_event"</TrafficMode>
+	<TrafficMode>1</TrafficMode>
 	<DMADelayAfterVsync>0</DMADelayAfterVsync>
 	<BLLPEOFPower>0x9</BLLPEOFPower>
 
 	<!-- Lane Configuration -->
 	<DSILanes>4</DSILanes>
-	<DSILaneMap>"lane_map_3012"</DSILaneMap>
+	<DSILaneMap>1</DSILaneMap>
 	<Lane0State>1</Lane0State>
 	<Lane1State>1</Lane1State>
 
