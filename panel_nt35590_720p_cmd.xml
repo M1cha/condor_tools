@@ -45,6 +45,8 @@
 	<PanelOrientation>0</PanelOrientation>
 	<PanelFrameRate>60</PanelFrameRate>
 	<PanelChannelId>0</PanelChannelId>
+	<PanelClockrate>424000000</PanelClockrate>
+	<PanelRotation></PanelRotation>
 	<DSIVirtualChannelId>0</DSIVirtualChannelId>
 	<PanelBroadcastMode>0</PanelBroadcastMode>
 	<DSIStream>0</DSIStream>
@@ -598,7 +600,7 @@
 		<PinState1>1</PinState1>
 		<PulseWidth1>20</PulseWidth1>
 		<PinState2>0</PinState2>
-		<PulseWidth2>2</PulseWidth2>
+		<PulseWidth2>20</PulseWidth2>
 		<PinState3>1</PinState3>
 		<PulseWidth3>20</PulseWidth3>
 		<EnableBit>2</EnableBit>

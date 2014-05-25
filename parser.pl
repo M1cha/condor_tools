@@ -1,4 +1,4 @@
-# Copyright (c) 2013, The Linux Foundation. All rights reserved.
+# Copyright (c) 2013-2014, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -397,7 +397,7 @@ if(uc($ARGV[1]) eq "PANEL")
 	for my $property ($xmldoc->findnodes('/GCDB/PanelEntry/PanelTimings'))
 	{
 		printTargetPhysical($PANELH, $property, lc($nameinH) .
-			"_timings","uint32_t");
+			"_timings","uint32_t", 1);
 		print $PANELH "\n\n";
 		printHexArray($PANELDTSI, $property,
 						"qcom,mdss-dsi-panel-timings");
@@ -424,9 +424,9 @@ if(uc($ARGV[1]) eq "PANEL")
 	for my $tmpProperty($xmldoc->findnodes('/GCDB/PanelEntry/ResetSequence'))
 	{
 		print $PANELH "static struct panel_reset_sequence " .
-				lc($nameinH) . "_reset_seq = {\n ";
+				lc($nameinH) . "_panel_reset_seq = {\n";
 		printResetSeqinH($PANELH, $tmpProperty);
-		print $PANELH "\n\n"
+		print $PANELH "\n"
 	}
 	printSectionHeader($PANELH, "Backlight Settings");
 	print $PANELH "\n";
@@ -725,8 +725,9 @@ sub printTargetPhysical
 	my $property = shift;
 	my $name = shift;
 	my $datatype = shift;
+	my $static = (shift) ? "" : "static ";
 	(my $element) = $property->textContent() =~ /"([^"]*)"/;
-	print $fh "static const " . $datatype . " " . $name . "[] = {\n";
+	print $fh $static . "const " . $datatype . " " . $name . "[] = {\n";
 	$element =~ s/\t//g;
 	$element =~ s/^/  /mg;
 	print $fh $element . "\n};";
@@ -1297,7 +1298,7 @@ sub printSectionHeader
 sub printheader
 {
 	my $fh = shift;
-	print $fh "/* Copyright (c) 2013, The Linux Foundation. All rights reserved.\n";
+	print $fh "/* Copyright (c) 2013-2014, The Linux Foundation. All rights reserved.\n";
 	print $fh " *\n";
 	print $fh " * Redistribution and use in source and binary forms, with or without\n";
 	print $fh " * modification, are permitted provided that the following conditions\n";
@@ -1338,7 +1339,7 @@ sub printdtsheader
 	my $fh = shift;
 	my $name = shift;
 
-	print $fh "/* Copyright (c) 2013, The Linux Foundation. All rights reserved.\n";
+	print $fh "/* Copyright (c) 2013-2014, The Linux Foundation. All rights reserved.\n";
 	print $fh " *\n";
 	print $fh " * This program is free software; you can redistribute it and/or modify\n";
 	print $fh " * it under the terms of the GNU General Public License version 2 and\n";
