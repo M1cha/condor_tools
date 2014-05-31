@@ -31,43 +31,43 @@
 
 <GCDB>
   <Version>"1.0"</Version>
-  <PanelId>dsi-mot-inx-qhd-video-v0</PanelId>
-  <PanelH>mot_video_inx_qhd_430_v0</PanelH>
+  <PanelId>mot-tianma-qhd-video</PanelId>
+  <PanelH>mot_tianma_qhd_video</PanelH>
   <PanelEntry>
 
 	<!-- Panel configuration -->
-	<PanelName>"mipi_mot_video_inx_qhd_430_v0"</PanelName>
-	<PanelController>"0x1b"</PanelController>
+	<PanelName>"mipi_mot_video_tianma_qhd_430_v0"</PanelName>
+	<PanelController>"mdss_dsi0"</PanelController>
 	<PanelInterface>10</PanelInterface>
 	<PanelType>0</PanelType>
 	<PanelDestination>"DISPLAY_1"</PanelDestination>
 	<PanelOrientation>0</PanelOrientation>
-	<PanelFrameRate>0x3c</PanelFrameRate>
-	<PanelChannelId>0x0</PanelChannelId>
-	<DSIVirtualChannelId>0x0</DSIVirtualChannelId>
+	<PanelFrameRate>60</PanelFrameRate>
+	<PanelChannelId>0</PanelChannelId>
+	<DSIVirtualChannelId>0</DSIVirtualChannelId>
 	<PanelBroadcastMode>0</PanelBroadcastMode>
 	<!-- Optional Panel configuration -->
 	<!--BitClockFrequency>0</BitClockFrequency -->
-	<DSIStream>0x0</DSIStream>
+	<DSIStream>0</DSIStream>
 	<PanelCompatible>"qcom,mdss-dsi-panel"</PanelCompatible>
 	<InterleaveMode>0</InterleaveMode>
-	<PanPhysicalWidthDimension>0x36</PanPhysicalWidthDimension>
-	<PanPhysicalHeightDimension>0x5f</PanPhysicalHeightDimension>
+	<PanPhysicalWidthDimension>54</PanPhysicalWidthDimension>
+	<PanPhysicalHeightDimension>95</PanPhysicalHeightDimension>
 
 	<!-- Panel Resolution -->
-	<PanelWidth>0x21c</PanelWidth>
-	<PanelHeight>0x3c0</PanelHeight>
-	<HFrontPorch>0x28</HFrontPorch>
-	<HBackPorch>0x2a</HBackPorch>
-	<HPulseWidth>0x4</HPulseWidth>
-	<HSyncSkew>0x0</HSyncSkew>
-	<VBackPorch>0x11</VBackPorch>
-	<VFrontPorch>0x10</VFrontPorch>
-	<VPulseWidth>0x1</VPulseWidth>
-	<HLeftBorder>0x0</HLeftBorder>
-	<HRightBorder>0x0</HRightBorder>
-	<VTopBorder>0x0</VTopBorder>
-	<VBottomBorder>0x0</VBottomBorder>
+	<PanelWidth>540</PanelWidth>
+	<PanelHeight>960</PanelHeight>
+	<HFrontPorch>40</HFrontPorch>
+	<HBackPorch>42</HBackPorch>
+	<HPulseWidth>4</HPulseWidth>
+	<HSyncSkew>0</HSyncSkew>
+	<VBackPorch>17</VBackPorch>
+	<VFrontPorch>16</VFrontPorch>
+	<VPulseWidth>1</VPulseWidth>
+	<HLeftBorder>0</HLeftBorder>
+	<HRightBorder>0</HRightBorder>
+	<VTopBorder>0</VTopBorder>
+	<VBottomBorder>0</VBottomBorder>
 	<!-- Optional Panel resolution configuration -->
 	<!--HActiveRes>0</HActiveRes>
 	<VActiveRes>100</VActiveRes>
@@ -76,18 +76,20 @@
 	<InvertHsyncPolarity>0</InvertHsyncPolarity -->
 
 	<!-- Panel Color Information -->
-	<ColorFormat>0x18</ColorFormat>
+	<ColorFormat>24</ColorFormat>
 	<UnderFlowColor>0xff</UnderFlowColor>
-	<BorderColor>0x0</BorderColor>
+	<BorderColor>0</BorderColor>
 
 	<!-- Panel Command information -->
-	<OnCommand>"0x29010000, 0x2b0, 0x4290100, 0x2, 0x2901, 0x0, 0x4ff9605, 0x1290100, 0x2, 0x802901, 0x0, 0x3ff9605, 0x29010000, 0x200, 0x95290100, 0x2, 0xc5340501, 0x7800, 0x2110005, 0x1000000, 0x22900"</OnCommand>
-	<OffCommand>"0x05, 0x01, 0x00, 0x00, 0x00, 0x00, 0x02, 0x28, 0x00, 0x05, 0x01, 0x00, 0x00, 0x78, 0x00, 0x02, 0x10, 0x00"</OffCommand>
+	<OnCommand>"0x05, 0x01, 0x00, 0x00, 0x78, 0x00, 0x02, 0x11, 0x00,
+			0x05, 0x01, 0x00, 0x00, 0x00, 0x00, 0x02, 0x29, 0x00"</OnCommand>
+	<OffCommand>"0x05, 0x01, 0x00, 0x00, 0x00, 0x00, 0x02, 0x28, 0x00,
+			0x05, 0x01, 0x00, 0x00, 0x78, 0x00, 0x02, 0x10, 0x00"</OffCommand>
 	<OnCommandState>0</OnCommandState>
-	<OffCommandState>1</OffCommandState>
+	<OffCommandState>0</OffCommandState>
 
 	<!-- Video mode panel information -->
-	<HSyncPulse>0x0</HSyncPulse>
+	<HSyncPulse>0</HSyncPulse>
 	<HFPPowerMode>0</HFPPowerMode>
 	<HBPPowerMode>0</HBPPowerMode>
 	<HSAPowerMode>0</HSAPowerMode>
@@ -104,28 +106,28 @@
 	<Lane1State>1</Lane1State>
 
 	<!-- Panel Timing -->
-	<PanelTimings>"0x7f1c1300, 0x414a171f, 0x2d030400"</PanelTimings>
-	<DSIMDPTrigger>0</DSIMDPTrigger>
-	<DSIDMATrigger>4</DSIDMATrigger>
-	<TClkPost>0x4</TClkPost>
+	<PanelTimings>"0x7f, 0x1c, 0x13, 0x00, 0x41, 0x4a, 0x17, 0x1f, 0x2d, 0x03, 0x04, 0x00"</PanelTimings>
+	<DSIMDPTrigger>4</DSIMDPTrigger>
+	<DSIDMATrigger>0</DSIDMATrigger>
+	<TClkPost>0x04</TClkPost>
 	<TClkPre>0x1d</TClkPre>
 
 	<!-- Backlight -->
 	<BLInterfaceType>1</BLInterfaceType>
-	<BLMinLevel>0x1</BLMinLevel>
-	<BLMaxLevel>0xff</BLMaxLevel>
+	<BLMinLevel>1</BLMinLevel>
+	<BLMaxLevel>255</BLMaxLevel>
 	<BLStep>100</BLStep>
 	<BLPMICModel>"PMIC_8941"</BLPMICModel>
 	<BLPMICControlType>1</BLPMICControlType>
 
 	<!-- Panel Reset Sequence -->
 	<ResetSequence>
-		<PinState1>0x1</PinState1>
-		<PulseWidth1>0x2</PulseWidth1>
-		<PinState2>0x0</PinState2>
-		<PulseWidth2>0x1</PulseWidth2>
-		<PinState3>0x1</PinState3>
-		<PulseWidth3>0x6</PulseWidth3>
+		<PinState1>1</PinState1>
+		<PulseWidth1>2</PulseWidth1>
+		<PinState2>0</PinState2>
+		<PulseWidth2>1</PulseWidth2>
+		<PinState3>1</PinState3>
+		<PulseWidth3>6</PulseWidth3>
 		<EnableBit>2</EnableBit>
 	</ResetSequence>
 
