@@ -57,7 +57,7 @@
 	<!-- Panel Resolution -->
 	<PanelWidth>540</PanelWidth>
 	<PanelHeight>960</PanelHeight>
-	<HFrontPorch>40</HFrontPorch>
+	<HFrontPorch>41</HFrontPorch>
 	<HBackPorch>42</HBackPorch>
 	<HPulseWidth>4</HPulseWidth>
 	<HSyncSkew>0</HSyncSkew>
@@ -107,7 +107,7 @@
 	<BLLPEOFPower>0x9</BLLPEOFPower>
 
 	<!-- Lane Configuration -->
-	<DSILanes>4</DSILanes>
+	<DSILanes>2</DSILanes>
 	<DSILaneMap>1</DSILaneMap>
 	<Lane0State>1</Lane0State>
 	<Lane1State>1</Lane1State>
